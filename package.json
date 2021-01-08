@@ -1,0 +1,50 @@
+{
+  "name": "theia-test",
+  "version": "1.0.0",
+  "homepage": "https://fusiondb.com/",
+  "author": "Evolved Binary <tech@evolvedbinary.com> (https://evolvedbinary.com)",
+  "license": "MIT",
+  "private": true,
+  "main": "scripts/theia-electron-main.js",
+  "scripts": {
+    "prepare": "yarn run clean && yarn build",
+    "clean": "theia clean",
+    "build": "theia build --mode development",
+    "start": "theia start",
+    "package": "yarn run build && electron-builder",
+    "package:all": "yarn run build && electron-builder -lmw"
+  },
+  "theia": {
+    "target": "electron",
+    "frontend": {
+      "config": {
+        "applicationName": "Fusion Studio"
+      }
+    }
+  },
+  "dependencies": {
+    "@theia/callhierarchy": "^1.9.0",
+    "@theia/electron": "^1.9.0",
+    "@theia/file-search": "^1.9.0",
+    "@theia/git": "^1.9.0",
+    "@theia/markers": "^1.9.0",
+    "@theia/messages": "^1.9.0",
+    "@theia/mini-browser": "^1.9.0",
+    "@theia/monaco": "^1.9.0",
+    "@theia/navigator": "^1.9.0",
+    "@theia/outline-view": "^1.9.0",
+    "@theia/plugin-ext-vscode": "^1.9.0",
+    "@theia/preferences": "^1.9.0",
+    "@theia/preview": "^1.9.0",
+    "@theia/search-in-workspace": "^1.9.0",
+    "@theia/terminal": "^1.9.0",
+    "fs-extra": "^9.0.1",
+    "fusion-studio-extension": "^1.1.0",
+    "xterm": "^4.9.0",
+    "yargs": "^16.2.0"
+  },
+  "devDependencies": {
+    "@theia/cli": "^1.9.0",
+    "electron-builder": "^22.9.1"
+  }
+}
