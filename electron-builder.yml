@@ -27,8 +27,8 @@ mac:
 
 linux:
   target:
-    # - deb
-    # - rpm
+    - deb
+    - rpm
     - AppImage
   category: Development
   icon: resources/icons
